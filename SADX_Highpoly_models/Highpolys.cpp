@@ -9,6 +9,7 @@ extern "C"
 	__declspec(dllexport) __declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions)
 	{
 	ReplacePVM("sonic", "sonicnm");
+	ReplacePVM("supersonic", "supersonicnm")
 	}
 	__declspec(dllexport) ModInfo SADXModInfo = { ModLoaderVer };
 }
