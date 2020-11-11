@@ -10,6 +10,7 @@ extern "C"
 	{
 	ReplacePVM("sonic", "sonicnm");
 	ReplacePVM("supersonic", "supersonicnm")
+	ReplacePVM("Miles", "Milesnm")
 	}
 	__declspec(dllexport) ModInfo SADXModInfo = { ModLoaderVer };
 }
