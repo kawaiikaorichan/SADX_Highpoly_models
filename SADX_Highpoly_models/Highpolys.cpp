@@ -4,7 +4,6 @@
 #include "pch.h"
 #include <cmath>
 #include "stdafx.h"
-#include "OBJECT_SonicPointingFinger.h"
 
 //Macros
 #define ReplacePVM(a, b) helperFunctions.ReplaceFile("system\\" a ".PVM", "system\\" b ".PVM");
@@ -308,6 +307,82 @@ extern "C"
 		0, 452,
 	};
 
+	uint16_t SSonic_RightLowerArmIndices_DX[] = {
+		4, 468,
+		5, 649,
+		1, 465,
+		0, 644,
+	};
+
+	uint16_t SSonic_RightLegIndices_DX[] = {
+		0, 660,
+		1, 661,
+		4, 664,
+		5, 665,
+	};
+
+	uint16_t SSonic_RightHandIndices_DX[] = {
+	11, 50,
+	58, 418,
+	59, 417,
+	60, 416,
+	0, 14,
+	67, 157,
+	68, 156,
+	69, 155,
+	12, 13,
+	13, 163,
+	14, 162,
+	15, 161,
+	1, 55,
+	19, 376,
+	20, 375,
+	21, 374,
+	5, 54,
+	28, 289,
+	29, 288,
+	30, 287,
+	8, 12,
+	37, 487,
+	38, 486,
+	39, 485,
+	4, 15,
+	46, 481,
+	47, 480,
+	48, 479,
+	};
+
+	uint16_t SSonic_LeftHandIndices_DX[] = {
+	11, 50,
+	61, 412,
+	62, 411,
+	63, 410,
+	4, 15,
+	64, 82,
+	65, 81,
+	66, 80,
+	8, 12,
+	28, 211,
+	29, 210,
+	30, 209,
+	5, 54,
+	19, 232,
+	20, 231,
+	21, 230,
+	1, 55,
+	16, 475,
+	17, 474,
+	18, 473,
+	12, 13,
+	40, 154,
+	41, 153,
+	42, 152,
+	0, 14,
+	52, 349,
+	53, 348,
+	54, 347,
+	};
+
 	void __cdecl InitSonicWeldInfo_mod()
 	{
 		NJS_OBJECT* v0; // ebp@1
@@ -510,11 +585,11 @@ extern "C"
 		SonicWeldInfo[23].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[23].ModelA = SONIC_OBJECTS[24];
 		SonicWeldInfo[23].ModelB = SONIC_OBJECTS[25];
-		SonicWeldInfo[23].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightLowerArmIndices_DX) / 2);
+		SonicWeldInfo[23].VertexPairCount = (uint8_t)(LengthOfArray(SSonic_RightLowerArmIndices_DX) / 2);
 		SonicWeldInfo[23].WeldType = 2;
 		SonicWeldInfo[23].anonymous_5 = 0;
 		SonicWeldInfo[23].VertexBuffer = 0;
-		SonicWeldInfo[23].VertIndexes = Sonic_RightLowerArmIndices_DX;
+		SonicWeldInfo[23].VertIndexes = SSonic_RightLowerArmIndices_DX;
 		SonicWeldInfo[24].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[24].ModelA = SONIC_OBJECTS[28];
 		SonicWeldInfo[24].ModelB = SONIC_OBJECTS[29];
@@ -542,11 +617,11 @@ extern "C"
 		SonicWeldInfo[27].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[27].ModelA = SONIC_OBJECTS[34];
 		SonicWeldInfo[27].ModelB = SONIC_OBJECTS[35];
-		SonicWeldInfo[27].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightLegIndices_DX) / 2);
+		SonicWeldInfo[27].VertexPairCount = (uint8_t)(LengthOfArray(SSonic_RightLegIndices_DX) / 2);
 		SonicWeldInfo[27].WeldType = 2;
 		SonicWeldInfo[27].anonymous_5 = 0;
 		SonicWeldInfo[27].VertexBuffer = 0;
-		SonicWeldInfo[27].VertIndexes = Sonic_RightLegIndices_DX;
+		SonicWeldInfo[27].VertIndexes = SSonic_RightLegIndices_DX;
 		SonicWeldInfo[28].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[28].ModelA = SONIC_OBJECTS[38];
 		v3 = SONIC_OBJECTS[39];
@@ -567,35 +642,35 @@ extern "C"
 		SonicWeldInfo[30].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[30].ModelA = SONIC_OBJECTS[36];
 		SonicWeldInfo[30].ModelB = SONIC_OBJECTS[37];
-		SonicWeldInfo[30].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightShoeIndices_DX) / 2);
+		SonicWeldInfo[30].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightLightIndices_DX) / 2);
 		SonicWeldInfo[30].WeldType = 2;
 		SonicWeldInfo[30].anonymous_5 = 0;
 		SonicWeldInfo[30].VertexBuffer = 0;
-		SonicWeldInfo[30].VertIndexes = Sonic_RightShoeIndices_DX;
+		SonicWeldInfo[30].VertIndexes = Sonic_RightLightIndices_DX;
 		SonicWeldInfo[31].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[31].ModelA = SONIC_OBJECTS[41];
 		SonicWeldInfo[31].ModelB = SONIC_OBJECTS[42];
-		SonicWeldInfo[31].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_LeftShoeIndices_DX) / 2);
+		SonicWeldInfo[31].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_LeftLightIndices_DX) / 2);
 		SonicWeldInfo[31].WeldType = 2;
 		SonicWeldInfo[31].anonymous_5 = 0;
 		SonicWeldInfo[31].VertexBuffer = 0;
-		SonicWeldInfo[31].VertIndexes = Sonic_LeftShoeIndices_DX;
+		SonicWeldInfo[31].VertIndexes = Sonic_LeftLightIndices_DX;
 		SonicWeldInfo[32].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[32].ModelA = SONIC_OBJECTS[31];
 		SonicWeldInfo[32].ModelB = SONIC_OBJECTS[32];
-		SonicWeldInfo[32].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_LeftHandIndices_DX) / 2);
+		SonicWeldInfo[32].VertexPairCount = (uint8_t)(LengthOfArray(SSonic_LeftHandIndices_DX) / 2);
 		SonicWeldInfo[32].WeldType = 2;
 		SonicWeldInfo[32].anonymous_5 = 0;
 		SonicWeldInfo[32].VertexBuffer = 0;
-		SonicWeldInfo[32].VertIndexes = Sonic_LeftHandIndices_DX;
+		SonicWeldInfo[32].VertIndexes = SSonic_LeftHandIndices_DX;
 		SonicWeldInfo[33].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[33].ModelA = SONIC_OBJECTS[26];
 		v4 = SONIC_OBJECTS[27];
 		SonicWeldInfo[33].anonymous_5 = 0;
 		SonicWeldInfo[33].VertexBuffer = 0;
-		SonicWeldInfo[33].VertIndexes = Sonic_RightHandIndices_DX;
+		SonicWeldInfo[33].VertIndexes = SSonic_RightHandIndices_DX;
 		SonicWeldInfo[33].ModelB = v4;
-		SonicWeldInfo[33].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightHandIndices_DX) / 2);
+		SonicWeldInfo[33].VertexPairCount = (uint8_t)(LengthOfArray(SSonic_RightHandIndices_DX) / 2);
 		SonicWeldInfo[33].WeldType = 2;
 		SonicWeldInfo[34].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[34].ModelA = SONIC_OBJECTS[31];
@@ -603,7 +678,7 @@ extern "C"
 		SonicWeldInfo[34].anonymous_5 = 0;
 		SonicWeldInfo[34].VertexBuffer = 0;
 		SonicWeldInfo[34].VertexPairCount = 4;
-		SonicWeldInfo[34].VertIndexes = Sonic_RightHandIndices_DX;
+		SonicWeldInfo[34].VertIndexes = SSonic_LeftHandIndices_DX;
 		SonicWeldInfo[34].WeldType = 2;
 		SonicWeldInfo[35].BaseModel = SONIC_OBJECTS[22];
 		SonicWeldInfo[35].ModelA = SONIC_OBJECTS[26];
@@ -613,7 +688,7 @@ extern "C"
 		SonicWeldInfo[36].BaseModel = 0;
 		SonicWeldInfo[36].ModelA = 0;
 		SonicWeldInfo[36].ModelB = 0;
-		SonicWeldInfo[35].VertIndexes = Sonic_RightHandIndices_DX;
+		SonicWeldInfo[35].VertIndexes = SSonic_RightHandIndices_DX;
 		SonicWeldInfo[36].VertexPairCount = 0;
 		SonicWeldInfo[36].VertexBuffer = 0;
 		SonicWeldInfo[35].VertexPairCount = 4;
@@ -732,19 +807,19 @@ extern "C"
 		NPCSonicWeldInfo[12].BaseModel = *SONIC_OBJECTS;
 		NPCSonicWeldInfo[12].ModelA = SONIC_OBJECTS[58];
 		NPCSonicWeldInfo[12].ModelB = SONIC_OBJECTS[59];
-		NPCSonicWeldInfo[12].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightShoeIndices_DX) / 2);
+		NPCSonicWeldInfo[12].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightLightIndices_DX) / 2);
 		NPCSonicWeldInfo[12].anonymous_5 = 0;
 		NPCSonicWeldInfo[12].VertexBuffer = 0;
 		NPCSonicWeldInfo[12].WeldType = 2;
-		NPCSonicWeldInfo[12].VertIndexes = Sonic_RightShoeIndices_DX;
+		NPCSonicWeldInfo[12].VertIndexes = Sonic_RightLightIndices_DX;
 		NPCSonicWeldInfo[13].BaseModel = *SONIC_OBJECTS;
 		NPCSonicWeldInfo[13].ModelA = SONIC_OBJECTS[60];
 		v3 = SONIC_OBJECTS[61];
 		NPCSonicWeldInfo[13].anonymous_5 = 0;
 		NPCSonicWeldInfo[13].VertexBuffer = 0;
 		NPCSonicWeldInfo[13].ModelB = v3;
-		NPCSonicWeldInfo[13].VertIndexes = Sonic_LeftShoeIndices_DX;
-		NPCSonicWeldInfo[13].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_LeftShoeIndices_DX) / 2);
+		NPCSonicWeldInfo[13].VertIndexes = Sonic_LeftLightIndices_DX;
+		NPCSonicWeldInfo[13].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_LeftLightIndices_DX) / 2);
 		NPCSonicWeldInfo[13].WeldType = 2;
 		NPCSonicWeldInfo[14].BaseModel = *SONIC_OBJECTS;
 		NPCSonicWeldInfo[14].ModelA = SONIC_OBJECTS[2];
@@ -756,18 +831,18 @@ extern "C"
 		NPCSonicWeldInfo[15].ModelB = 0;
 		NPCSonicWeldInfo[15].VertexPairCount = 0;
 		NPCSonicWeldInfo[15].VertexBuffer = 0;
-		NPCSonicWeldInfo[14].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_RightUpperArmIndices_DX) / 2);
+		NPCSonicWeldInfo[14].VertexPairCount = (uint8_t)(LengthOfArray(Sonic_WristRingIndices_DX) / 2);
 		NPCSonicWeldInfo[14].ModelB = v4;
 		NPCSonicWeldInfo[14].WeldType = 2;
-		NPCSonicWeldInfo[14].VertIndexes = Sonic_RightUpperArmIndices_DX;
+		NPCSonicWeldInfo[14].VertIndexes = Sonic_WristRingIndices_DX;
 		NPCSonicWeldInfo[15].VertIndexes = 0;
 	}
 
 	uint16_t Amy_RightUpperArmIndices_DX[] = {
-	0, 2,
-	4, 6,
-	5, 7,
-	1, 3,
+		0, 2,
+		4, 6,
+		5, 7,
+		1, 3,
 	};
 
 	uint16_t Amy_RightLowerArmIndices_DX[] = {
@@ -1248,14 +1323,6 @@ extern "C"
 	{
 	//Welding
 		Init_Sonic();
-		{
-			WriteJump((void*)0x007D0B50, InitSonicWeldInfo_mod);
-			WriteJump((void*)0x007D14D0, InitNPCSonicWeldInfo_mod);
-			WriteData((NJS_OBJECT**)0x00664C3E, &OBJECT_SonicPointingFinger);
-			WriteData((NJS_OBJECT**)0x0069E24B, &OBJECT_SonicPointingFinger);
-			WriteData((NJS_OBJECT**)0x006D010C, &OBJECT_SonicPointingFinger);
-			WriteData((NJS_OBJECT**)0x006D711E, &OBJECT_SonicPointingFinger);
-		}
 		Init_Amy();
 	//Disable morphs
 		WriteData<3>((void*)0x45BB60, 0x90u);
